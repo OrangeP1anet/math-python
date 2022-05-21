@@ -1,2 +1,9 @@
 # math-python
 studying python
+
+## 目次
+
+* [lesson3-2](lesson3_2.ipynb) - 一次不定方程式
+* [lesson4](lesson4.ipynb) - ax≡1 (mod N)
+* [lesson5](lesson5.ipynb) - 逆行列
+* [lesson6](lesson6.ipynb) - 合同式
