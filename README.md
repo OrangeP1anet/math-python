@@ -6,4 +6,5 @@ studying python
 * [lesson3-2](lesson3_2.ipynb) - 一次不定方程式
 * [lesson4](lesson4.ipynb) - ax≡1 (mod N)
 * [lesson5](lesson5.ipynb) - 逆行列
-* [lesson6](lesson6.ipynb) - 合同式
+* [lesson6](lesson6.ipynb) - 連立方程式
+* [お試しアプリ](https://share.streamlit.io/orangep1anet/math-python/main/streamlit/math_app.py) - 連立方程APP
