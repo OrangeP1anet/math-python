@@ -11,4 +11,4 @@ studying python
 ## memo
 
 現在目次に載っていないものも、講義が進んでいるところまでStreamlitで対応させました。
-[お試しアプリ](https://share.streamlit.io/orangep1anet/math-python/main/streamlit/math_app.py) - 連立方程APP
+[お試しアプリ](https://share.streamlit.io/orangep1anet/math-python/main/streamlit/math_app.py)
