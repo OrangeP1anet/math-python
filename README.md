@@ -10,6 +10,6 @@ studying python
 
 ## memo
 
-現在目次に載っていないものも、講義が進んでいるところまでStreamlitで対応させました。
+Streamlit
 [お試しアプリ](https://share.streamlit.io/orangep1anet/math-python/main/streamlit/math_app.py)  
-[Streamlitのソースコード](/streamlit/math_app.py)
+[お試しアプリのソースコード](/streamlit/math_app.py)
