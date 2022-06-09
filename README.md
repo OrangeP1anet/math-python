@@ -9,8 +9,7 @@ studying python
 * [lesson6](lesson6.ipynb) - 連立方程式
 * [lesson8](lesson8.ipynb) - Nを法とした行列を用いた暗号
 
-## memo
 
-Streamlit
-[お試しアプリ](https://share.streamlit.io/orangep1anet/math-python/main/streamlit/math_app.py)  
-[お試しアプリのソースコード](/streamlit/math_app.py)
+[Streamlit版](https://share.streamlit.io/orangep1anet/math-python/main/streamlit/math_app.py)
+
+## memo
