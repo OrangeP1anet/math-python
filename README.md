@@ -8,6 +8,7 @@ studying python
 * [lesson5](lesson5.ipynb) - 逆行列
 * [lesson6](lesson6.ipynb) - 連立方程式
 * [lesson8](lesson8.ipynb) - Nを法とした行列を用いた暗号
+* [lesson9](lesson_9.ipynb) - RSA
 
 
 [Streamlit版](https://share.streamlit.io/orangep1anet/math-python/main/streamlit/math_app.py)
