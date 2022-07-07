@@ -2,6 +2,26 @@ import streamlit as st
 import numpy as np
 
 
+def home():
+    st.title("math_app")
+    st.write("情報数学基礎プログラミング課題")
+    st.markdown(
+        f"""
+    > ### 目次
+    * lesson01 - 四則演算
+    * lesson02 - ユークリッドの互除法
+    * lesson03 - 一次不定方程式
+    * lesson04 - ax≡1 (mod N)
+    * lesson05 - 逆行列
+    * lesson06 - 連立方程式
+    * lesson08 - Nを法とした行列を用いた暗号
+    * lesson09 - RSA暗号
+
+    サイドバーより各ページへ移動
+    """
+    )
+
+
 def page01():
     st.title("lesson01 - 四則演算")
 
@@ -514,23 +534,42 @@ def page08():
         st.write(ans)
 
 
-def home():
-    st.title("math_app")
-    st.write("情報数学基礎プログラミング課題")
-    st.markdown(
-        f"""
-    > ### 目次
-    * lesson01 - 四則演算
-    * lesson02 - ユークリッドの互除法
-    * lesson03 - 一次不定方程式
-    * lesson04 - ax≡1 (mod N)
-    * lesson05 - 逆行列
-    * lesson06 - 連立方程式
-    * lesson08 - Nを法とした行列を用いた暗号
-    
-    サイドバーより各ページへ移動
-    """
-    )
+def page09():
+
+    st.title("lesson09 - RSA暗号")
+
+    n = int(st.number_input("Enter n: ", key=int, step=1))
+    e = int(st.number_input("Enter e: ", key=int, step=1))
+    plaintext = str(st.text_input("Enter Plaintext: ", key=str))
+    template = str(st.text_input("Enter Template: ", key=str))
+    if st.button("実行"):
+        n_shin = len(template)  # len関数で文字数NをN進数とする
+
+        result = 0  # 初期化
+        # 平文を１つの数字にする(N進数10進数変換)
+        for i in range(len(plaintext)):
+            for j in range(len(template)):
+                if plaintext[i] == template[j]:
+                    result += j * (len(template) ** (len(plaintext) - i - 1))
+
+        # 平文を数字にしたものをPとする
+        P = result
+
+        # PをCとして暗号化する
+        C = (P**e) % n
+
+        # Cを10進数からN進数に変換
+        C = np.base_repr(C, n_shin)
+
+        crypttext = ""  # 暗号文の文字列の初期化
+        # Cを文字列にする
+        for i in range(len(C)):
+            j = 0
+            for j in range(len(template)):
+                if int(C[i]) == int(j):
+                    crypttext += template[j]
+
+        st.write(f"{plaintext}を暗号化すると{crypttext}")
 
 
 # 複数ページを管理
@@ -543,6 +582,7 @@ pagelist = [
     "lesson05 - 逆行列",
     "lesson06 - 連立方程式",
     "lesson08 - Nを法とした行列を用いた暗号",
+    "lesson09 - RSA暗号",
 ]
 
 # サイドバー管理
@@ -569,6 +609,9 @@ if sidebar == "lesson06 - 連立方程式":
 
 if sidebar == "lesson08 - Nを法とした行列を用いた暗号":
     page08()
+
+if sidebar == "lesson09 - RSA暗号":
+    page09()
 
 if sidebar == "home":
     home()
